@@ -1,0 +1,16 @@
+# examples/0003-scale-mix-network.toml
+
+[relaychain]
+default_image = "docker.io/paritytech/polkadot:master"
+default_command = "polkadot"
+chain = "kusama-local"
+
+  [[relaychain.node_groups]]
+  name = "vg-a"
+  args = [ "-lparachain=debug" ]
+  count = 5
+
+  [[relaychain.node_groups]]
+  name = "vg-b"
+  image = "docker.io/paritytech/polkadot:v0.9.30"
+  count = 5

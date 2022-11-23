@@ -1,0 +1,20 @@
+# examples/0002-small-network-paras.toml
+[relaychain]
+default_image = "docker.io/paritytech/polkadot:master"
+default_command = "polkadot"
+chain = "kusama-local"
+
+  [[relaychain.node_groups]]
+  name = "validator"
+  count = 2
+
+[[parachains]]
+id = 1001
+cumulus_based = true
+chain = "statemint-sub-zero-local"
+
+  [parachains.collator]
+  name = "collator02"
+  image = "docker.io/parity/polkadot-collator:latest"
+  command = "polkadot-parachain-sub0"
+  args = ["-lparachain=debug", "-laura=debug"]
