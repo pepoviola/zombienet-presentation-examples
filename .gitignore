@@ -7,3 +7,5 @@ bins
 **/target/
 *.swp
 .vscode
+cumulus
+parachain-template-sub0-example/
