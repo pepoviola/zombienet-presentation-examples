@@ -1,7 +1,7 @@
 # examples/0001-small-network.toml
 
 [relaychain]
-default_image = "docker.io/paritytech/polkadot:master"
+default_image = "docker.io/parity/polkadot:latest"
 default_command = "polkadot"
 chain = "rococo-local"
 
@@ -17,5 +17,5 @@ cumulus_based = true
 
   [parachains.collator]
   name = "collator01"
-  image = "docker.io/parity/polkadot-collator:latest"
+  image = "docker.io/parity/polkadot-parachain:latest"
   command = "polkadot-parachain"

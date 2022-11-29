@@ -1,6 +1,6 @@
 # examples/0002-small-network-paras.toml
 [relaychain]
-default_image = "docker.io/paritytech/polkadot:master"
+default_image = "docker.io/parity/polkadot:latest"
 default_command = "polkadot"
 chain = "kusama-local"
 
@@ -15,7 +15,7 @@ chain = "statemine-local"
 
   [parachains.collator]
   name = "collator01"
-  image = "docker.io/parity/polkadot-collator:latest"
+  image = "docker.io/parity/polkadot-parachain:latest"
   command = "polkadot-parachain"
 
 [[parachains]]
@@ -24,5 +24,5 @@ cumulus_based = true
 
   [parachains.collator]
   name = "collator01"
-  image = "docker.io/parity/polkadot-collator:latest"
+  image = "docker.io/parity/polkadot-parachain:latest"
   command = "polkadot-parachain"

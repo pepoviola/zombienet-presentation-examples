@@ -1,7 +1,7 @@
 # examples/0003-scale-mix-network.toml
 
 [relaychain]
-default_image = "docker.io/paritytech/polkadot:master"
+default_image = "docker.io/parity/polkadot:latest"
 default_command = "polkadot"
 chain = "kusama-local"
 
